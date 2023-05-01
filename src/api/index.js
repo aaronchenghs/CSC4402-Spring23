@@ -22,6 +22,7 @@ export const getToken = () => {
   return localStorage.getItem("CardEXtoken");
 };
 
+// Potentially useful 
 // export const loggedAdmin = () => {
 //     localStorage.setItem("admin", "isAdmin")
 // };
@@ -172,22 +173,6 @@ export async function getCart(id, token) {
       console.log('Error: ', err);
     });
   return cart;
-  // try {
-  //   console.log("TOP!!!");
-  //   const { data } = await axios.get(`/api/cart/${id}`, {
-  //     headers: {
-  //       Authorization: `Bearer ${token}`,
-  //     },
-  //   });
-  //   // Old Return that Only returned CardID's not CardObjects
-  //   // return data.data.data;
-  //   console.log("BOTTOM!!!");
-  //   console.log(data.data)
-  //   return data.data;
-  // } catch (error) {
-  //   console.error("Error getting cart");
-  //   throw error;
-  // }
 }
 
 export async function removeItemFromCart(itemId, token) {
