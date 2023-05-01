@@ -46,6 +46,7 @@ ordersRouter.get("/user", requireUser, async (req, res, next) => {
   }
 });
 
+// work in progress
 // ordersRouter.get("/all", async (req, res, next) => {
 //   try {
 //     const data = await getAllOrders();
