@@ -41,3 +41,29 @@ We have already assigned roles and begun working on the project; we look forward
 what we can create in the next few weeks.
 
 END
+
+# Developer's notes
+Note: Backend was built with Node.js and PostgreSQL
+
+1) Open a Ubuntu terminal 
+2) Run the Steps below:
+  - run command in linux terminal: ``sudo service postgresql start``
+  - Must create a local DB named ``cardex``
+  - psql create DB command: ``<username>=# create database cardex;``
+  - *To populate AND reintialize* the Database run: ``npm run start:database``
+  - **-Or-** 
+  - *To launch Database **WITHOUT** repopulating run*: ``npm start server:dev``
+3) Open another terminal
+4) If first launch continue else Skip to step 5:
+  - Delete package-lock.json, node_modules folder
+  - Run command ``npm i" in your terminal``
+5) Run command ``npm run start:frontend``
+
+Site should be running locally.
+
+**Useful postgres commands**
+\l - list all databases current user has access to
+\c database_name; edit that database
+
+Commmon Bug (server busy on port 5000 etc.)
+``killall node``
