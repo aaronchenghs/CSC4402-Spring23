@@ -350,14 +350,14 @@ const createInitialUsers = async () => {
         email: "Eman@hotmail.com",
       },
       {
-        username: "Astevens14",
-        password: "GoColts20",
-        email: "austinstevens@yahoo.com",
+        username: "Aaron",
+        password: "Aaron321",
+        email: "ACheng@yahoo.com",
       },
       {
-        username: "ChrisTheBoss",
-        password: "CW123",
-        email: "ChrisTheBoss@aol.com",
+        username: "Catherine",
+        password: "Cat321",
+        email: "PinkFlowers@aol.com",
       },
     ];
     const users = await Promise.all(usersToCreate.map(createUser));
