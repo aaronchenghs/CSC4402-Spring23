@@ -31,20 +31,21 @@ const Navbar = (
 
   const handleSearch = (event) => {
 		event.preventDefault();
-		if (!searchTerm) { 
+		if (!event.target.value) { 
 			resetCards();
 		} else {
+      console.log(event.target.value)
 			let filteredCards = cards.filter((item) => {
-				return item.card_title.toLowerCase().includes(searchTerm.toLowerCase());
+				return item.card_title.toLowerCase().includes(event.target.value.toLowerCase());
 			});
 			setCards(filteredCards);
 		}
 	};
 
-	const searchOnChange = (event) => {
-    const keyword = event.target.value;
-    setSearchTerm(keyword);
-  };
+	// const searchOnChange = (event) => {
+  //   const keyword = event.target.value;
+  //   setSearchTerm(keyword);
+  // };
 
 	return (
 		<div className="navbarContainer sticky-top">
@@ -74,8 +75,7 @@ const Navbar = (
 				<li id="search">
 						<form action="" method="get">
 							<input type="text" name="search_text" id="search_text" placeholder="Search"
-								onChange={(e) => {
-									searchOnChange(e)
+								onKeyUp={(e) => {
 									handleSearch(e)
 								}}
 							/>
